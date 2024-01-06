@@ -482,16 +482,13 @@
                     <span class="icon-star text-warning"></span>
                     <span class="icon-star text-warning"></span>
                   </div>
-                  <h3 class="h5 text-primary mb-4">James Smith</h3>
+                  <h3 class="h5 text-primary mb-4">James Fernando</h3>
                   <blockquote>
                     <p>
-                      &ldquo;Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts. Separated they live in Bookmarksgrove right at the
-                      coast of the Semantics, a large language ocean.&rdquo;
+                      &ldquo;I am thoroughly impressed with the LUXE properties , as its user-friendly interface, accurate listings, innovative virtual tour feature, and exceptional customer support have collectively elevated my home-searching experience to unprecedented levels. &rdquo;
                     </p>
                   </blockquote>
-                  <p class="text-black-50">Designer, Co-founder</p>
+                  <p class="text-black-50">Designer </p>
                 </div>
               </div>
   
