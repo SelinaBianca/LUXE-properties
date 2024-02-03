@@ -777,7 +777,7 @@
                     As your dedicated real estate advisor, I prioritize your goals and work tirelessly to ensure a smooth and successful property transaction. With a client-centric approach, strong communication skills, and an extensive network, I am here to guide you through every step of the process. Whether you're buying, selling, or investing, let's collaborate to make your real estate journey a resounding success
                   </p>
   
-                  <ul class="social list-unstyled list-inline dark-hover">
+                  {{-- <ul class="social list-unstyled list-inline dark-hover">
                     <li class="list-inline-item">
                       <a href="#"><span class="icon-twitter"></span></a>
                     </li>
@@ -788,7 +788,7 @@
                       <a href="#"><span class="icon-linkedin"></span></a>
                     </li>
                     <li class="list-inline-item">
-                      <a href="#"><span class="icon-instagram"></span></a>
+                      <a href="#"><span class="icon-instagram"></span></a> --}}
                     </li>
                   </ul>
                 </div>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HouseCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,12 +18,41 @@ Route::get('/', function () {
     return view('home');
 });
 
+
+Route::resource("/housecategories", HouseCategoryController::class);
+
+
+
+
+
+
+// Route::get('hello', function () {
+//     return view('hello', [
+//         'name' => 'Taylor',
+//         'age' => 30,
+//         'address' => 'Hà Nội'
+//     ]);
+// });
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
+
+
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+   
+
+    Route::resource(
+        'user',
+        \App\Http\Controllers\UserController::class
+    );
 });
+
+
+Route::resource("/housecategories", HouseCategoryController::class);
+
