@@ -7,10 +7,18 @@
 
             <div class="card-body">
 
-                <form action="{{ url('housecategories') }}" method="POST">
-                    {!!csrf_field()!!}
+                <form action="{{ route('housecategories.store') }}" method="POST">
+                    @if (session('success'))
+                    <div class ="alert alert-success">
+                     {{session('success')}}
+                    </div>    
+                     
+                        
+                    @endif
+                    
+                    @csrf
 
-            
+                    <input type="hidden" name="token" value="{{csrf_token()}}">
                     <label>Type</label>
                     <input type="text" name="type" id="type" class="form-control" required><br>
             
@@ -24,6 +32,7 @@
                     <input type="text" name="bathrooms" id="bathrooms" class="form-control" required><br><br>
             
                     <input type="submit" value="save" class="btn btn-success">
+
                 </form>
             </div> 
             </div>

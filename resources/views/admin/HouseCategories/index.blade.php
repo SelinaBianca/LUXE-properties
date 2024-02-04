@@ -1,3 +1,4 @@
+
 @extends('admin.HouseCategories.layout')
 @section('content')
 
@@ -10,6 +11,8 @@
                         </div>
                         <div class="card-body">
                             <a href="{{ url('/housecategories/create')}}" class="btn btn-success btn-sm" title="Add New Property">Add Property</a>
+                            
+                            <a href="/dashboard" class="btn btn-success btn-sm" title="Add New Property">Dashboard</a>
                             <br/>
                         <br/>
                         <div class="table-responsive">
@@ -41,6 +44,8 @@
                                         <a href="" title="Edit House Category"><button class="btn btn-primary btn-sm"> <i class="fa fa-pencil-square-o" aria-hidden="true"> </i>Edit</button></a>
                                         
                                     <form method="POST" action="" accept-charset="UTF-8" styles="display:inline">
+                                        {{ method_field('DELETE') }}
+                                        {{ csrf_field() }}
                                         <button type="submit" class="btn btn-danger btn-sm" title="Delete property" onclick="return confirm("Confirm delete?")"> <i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
                                     </form>
                                 </td>
