@@ -22,13 +22,13 @@
                     <label>Type</label>
                     <input type="text" name="type" id="type" class="form-control" required><br>
             
-                    <label for="address">Address:</label>
+                    <label for="address">Address</label>
                     <input type="text" name="address" id="address"  class="form-control" required><br>
             
-                    <label for="bedrooms">Number of Bedrooms:</label>
+                    <label for="bedrooms">Number of Bedrooms</label>
                     <input type="text" name="bedrooms" id="bedrooms"  class="form-control" required><br>
             
-                    <label for="bathrooms">Number of Bathrooms:</label>
+                    <label for="bathrooms">Number of Bathrooms</label>
                     <input type="text" name="bathrooms" id="bathrooms" class="form-control" required><br><br>
             
                     <input type="submit" value="save" class="btn btn-success">

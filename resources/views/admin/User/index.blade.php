@@ -1,6 +1,6 @@
 <x-app-layout>
 
-    <div class="container mx-auto mt-1">
+    <div class="container mx-auto mt-24">
         <div class="px-4 sm:px-6 lg:px-8 bg-white pt-4">
 
             @if (session('success'))

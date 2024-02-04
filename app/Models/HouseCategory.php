@@ -14,12 +14,10 @@ Protected $primaryKey = 'id';
 
 Protected $fillable =[
     'type',
-    'Adress',
+    'Address',
     'Number_of_bedrooms',
-    'Number_of_bathroom',
-    'Agent',
-    'Agent_ID',
-    'Agent_Contact_Number'
+    'Number_of_bathrooms',
+   
 ];
 
 }

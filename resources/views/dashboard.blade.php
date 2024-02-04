@@ -18,9 +18,9 @@
                 </div>
 
                 <div class="bg-blue-200 p-4 rounded-md shadow-md">
-                    <h4 class="text-lg font-semibold text-gray-700 mb-2"></h4>
+                    <h4 class="text-lg font-semibold text-gray-700 mb-2">Users</h4>
                     <p class="text-gray-600">
-                        <a href="/housecategories" class="text-blue-500 hover:underline"></a>
+                        <a href="/user" class="text-blue-500 hover:underline">Manage Users</a>
                 </div>
 
                 <div class="bg-blue-200 p-4 rounded-md shadow-md">
@@ -29,12 +29,7 @@
                         <a href="/housecategories" class="text-blue-500 hover:underline"></a>
                 </div>
 
-                <div class="bg-blue-200 p-4 rounded-md shadow-md">
-                    <h4 class="text-lg font-semibold text-gray-700 mb-2"></h4>
-                    <p class="text-gray-600">
-                        <a href="/housecategories" class="text-blue-500 hover:underline"></a>
-                </div>
-
+                
                 
 
                 <!-- Add more cards for different sections as needed -->

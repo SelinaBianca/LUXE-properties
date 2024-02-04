@@ -45,6 +45,12 @@
                                   @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                       <li><a href="{{ route('api-tokens.index') }}">API Tokens</a></li>
                                   @endif
+
+                                   <!-- Add a link to the dashboard -->
+                    <x-dropdown-link href="{{ route('dashboard') }}">
+                        {{ __('Dashboard') }}
+                     </x-dropdown-link>
+                     
                                   <div class="border-t border-gray-200"></div>
                                   <form method="POST" action="{{ route('logout') }}" x-data>
                                       @csrf

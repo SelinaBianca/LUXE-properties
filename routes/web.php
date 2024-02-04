@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HouseCategoryController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,11 +21,6 @@ Route::get('/', function () {
 
 
 Route::resource("/housecategories", HouseCategoryController::class);
-
-
-
-
-
 
 // Route::get('hello', function () {
 //     return view('hello', [
@@ -56,3 +52,9 @@ Route::middleware([
 
 Route::resource("/housecategories", HouseCategoryController::class);
 
+//Route::get('admin/housecategories', 'HouseCategoryController@index')->name('admin.housecategories.index');
+
+
+
+
+Route::delete('/housecategories/{id}', 'HouseCategoryController@destroy')->name('housecategories.destroy');

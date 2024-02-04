@@ -14,12 +14,9 @@ return new class extends Migration
         Schema::create('house_categories', function (Blueprint $table) {
             $table->id('id');
             $table->string('Type');
-            $table->string('Adress');
+            $table->string('Address');
             $table->integer('Number_of_bedrooms');
-            $table->integer('Number_of_bathroom');
-            $table->string('Agent');
-            $table->string('Agent_ID');
-            $table->string('Agent_Contact_Number');
+            $table->integer('Number_of_bathrooms');
             $table->timestamps();
         });
     }
