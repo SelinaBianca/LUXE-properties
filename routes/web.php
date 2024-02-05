@@ -15,6 +15,7 @@ use App\Http\Controllers\HouseCategoryController;
 |
 */
 
+
 Route::get('/', function () {
     return view('home');
 });
@@ -50,11 +51,11 @@ Route::middleware([
 });
 
 
-Route::resource("/housecategories", HouseCategoryController::class);
+// Route::resource("/housecategories", HouseCategoryController::class);
 
 //Route::get('admin/housecategories', 'HouseCategoryController@index')->name('admin.housecategories.index');
 
 
 
 
-Route::delete('/housecategories/{id}', 'HouseCategoryController@destroy')->name('housecategories.destroy');
+// Route::delete('/housecategories/{id}', 'HouseCategoryController@destroy')->name('housecategories.destroy');

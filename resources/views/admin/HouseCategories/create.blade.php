@@ -2,18 +2,22 @@
 @section('content')
 
            
-            <div class="card" style="margin:20px:">
+            <div class="card" style="margin:20px; margin-top:50px !important;">
                 <div class="card-header">Create New Property</div>
 
-            <div class="card-body">
+                <div class="card-body">
 
                 <form action="{{ route('housecategories.store') }}" method="POST">
                     @if (session('success'))
-                    <div class ="alert alert-success">
-                     {{session('success')}}
-                    </div>    
-                     
-                        
+                        <div class ="alert alert-success">
+                        {{session('success')}}
+                        </div> 
+                    @endif
+
+                    @if (session('errors'))
+                        <div class ="alert alert-danger">
+                        {{session('errors')}}
+                        </div> 
                     @endif
                     
                     @csrf
@@ -38,6 +42,3 @@
             </div>
 
 @stop
-
-                            
-                  

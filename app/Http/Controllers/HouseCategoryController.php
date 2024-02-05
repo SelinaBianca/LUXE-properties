@@ -48,7 +48,7 @@ class HouseCategoryController extends Controller
 
 
          //return redirect()->back()->with('success', 'Saved successfully!');
-         return Redirect::route('housecategories.index')->with('success', 'Saved successfully!');
+         return Redirect::route('housecategories.index')->with('success', 'Property created!');
         
 
         
@@ -61,30 +61,49 @@ class HouseCategoryController extends Controller
     }
 
     
-    public function edit(HouseCategory $houseCategory)
+    public function edit($id)
     {
-        
-    return view('admin.HouseCategories.edit', compact('houseCategory'));
+        $houseCategory = HouseCategory::find($id);
+        return view('admin.HouseCategories.edit', compact('houseCategory'));
     }
 
 
 
-    public function update(UpdateHouseCategoryRequest $request, HouseCategory $houseCategory , $id)
+    public function update(Request $request,$id)
     {
+        $request->validate([
+            'type' => 'required|string|max:255',
+            'address' => 'required|string|max:255',
+            'bedrooms' => 'required|numeric',
+            'bathrooms' => 'required|numeric',
+        ]);
 
-    
-        $housecategories = HouseCategory::find($id);
-        $input = $request->all();
-        $housecategories->update($input);
-        return redirect('housecategories')->with('flash_message', 'student Updated!');  
-        
+        $houseCategory = HouseCategory::findOrFail($id);
+
+        // Update the attributes
+        $houseCategory->update([
+            'type' => $request->input('type'),
+            'Address' => $request->input('address'),
+            'Number_of_bedrooms' => $request->input('bedrooms'),
+            'Number_of_bathrooms' => $request->input('bathrooms'),
+            // Add more fields as needed
+        ]);
+
+        // Redirect the user after updating
+        return redirect()->route('housecategories.index')->with('success', 'Property updated!');
     }
 
 
     
-    public function destroy(HouseCategory $houseCategory)
+    public function destroy($id)
     {
+
+        $houseCategory = HouseCategory::findOrFail($id);
+
+        // Delete the house category
         $houseCategory->delete();
-        return redirect()->route('HouseCategories.index')->with('success', 'User successfully deleted!');
+
+        // Redirect to a specific route or URL after deletion
+        return redirect()->route('housecategories.index')->with('success', 'Property deleted!');
     }
 } 
