@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HouseCategoryController;
+use App\Http\Controllers;
+use app\Http\Controllers\FilamentController;
+use App\Http\Controllers\ApartmentController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\AgentController;
 
 
 /*
@@ -20,8 +25,32 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/properties', function () {
+    return view('properties');
+})->name('properties');
+
+Route::get('/services', function () {
+    return view('services');
+})->name('services');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
 
 Route::resource("/housecategories", HouseCategoryController::class);
+Route::resource('apartments', ApartmentController::class);
+Route::get('properties', [ApartmentController::class, 'properties'])->name('properties');
+
+
+// routes/web.php
+Route::resource('categories', CategoryController::class);
+Route::resource('agents', AgentController::class);
+
+
+
+Route::get('/properties', [ApartmentController::class, 'showProperties'])->name('properties');
+
 
 // Route::get('hello', function () {
 //     return view('hello', [
@@ -42,20 +71,15 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-   
+
+//   // Route::get('/admin', [FilamentController::class, 'index'])->name('filament.dashboard');
+//    Route::get('/admin/dashboard', [FilamentController::class, 'dashboard'])->name('filament.admin.pages.dashboard');
+
+
+
 
     Route::resource(
         'user',
-        \App\Http\Controllers\UserController::class
-    );
+        \App\Http\Controllers\UserController::class);
 });
 
-
-// Route::resource("/housecategories", HouseCategoryController::class);
-
-//Route::get('admin/housecategories', 'HouseCategoryController@index')->name('admin.housecategories.index');
-
-
-
-
-// Route::delete('/housecategories/{id}', 'HouseCategoryController@destroy')->name('housecategories.destroy');

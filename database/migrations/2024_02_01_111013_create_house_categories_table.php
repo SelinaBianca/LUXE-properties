@@ -12,11 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('house_categories', function (Blueprint $table) {
-            $table->id('id');
-            $table->string('Type');
-            $table->string('Address');
-            $table->integer('Number_of_bedrooms');
-            $table->integer('Number_of_bathrooms');
+            $table->id();
+            $table->string('title');
+            $table->text('description');
+            $table->decimal('price', 10, 2);
+            $table->string('category');
+            $table->string('location');
+            $table->string('agent');
+            $table->string('contact_email');
+            $table->string('contact_phone');
+            $table->json('images')->nullable();
+            $table->timestamp('published_at')->nullable();
+            $table->string('slug')->unique();
+            $table->boolean('featured');
             $table->timestamps();
         });
     }

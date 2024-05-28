@@ -13,11 +13,20 @@ protected $table = 'house_categories';
 Protected $primaryKey = 'id';
 
 Protected $fillable =[
-    'type',
-    'Address',
-    'Number_of_bedrooms',
-    'Number_of_bathrooms',
-   
+    'id',
+    'title',
+    'description',
+    'price',
+    'category',
+    'location',
+    'agent',
+    'contact_email',
+    'contact_phone',
+    'images',
+    'published_at',
+    'slug',
+    'featured'
+
 ];
 
 }

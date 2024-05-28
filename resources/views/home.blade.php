@@ -15,7 +15,7 @@
             style="background-image: url('asset/images/hero_bg_1.jpg')"
           ></div>
         </div>
-  
+
         <div class="container">
           <div class="row justify-content-center align-items-center">
             <div class="col-lg-9 text-center">
@@ -60,7 +60,7 @@
               </p>
             </div>
           </div>
-          
+
           <div class="row">
             <div class="col-12">
               <div class="property-slider-wrap">
@@ -69,15 +69,15 @@
                     <a href="property-single.html" class="img">
                       <img src="asset/images/img_1.jpg" alt="Image" class="img-fluid" />
                     </a>
-  
+
                     <div class="property-content">
                       <div class="price mb-2"><span>Rs.100,291,000</span></div>
                       <div>
                         <span class="d-block mb-2 text-black-50"
                           >Negombo road,Colombo</span>
-                        
+
                         <span class="city d-block mb-3">Colombo, Sri Lanka</span>
-  
+
                         <div class="specs d-flex mb-4">
                           <span class="d-block d-flex align-items-center me-3">
                             <span class="icon-bed me-2"></span>
@@ -88,7 +88,7 @@
                             <span class="caption">2 baths</span>
                           </span>
                         </div>
-  
+
                         <a
                           href="property-single.html"
                           class="btn btn-primary py-2 px-3"
@@ -98,12 +98,12 @@
                     </div>
                   </div>
                   <!-- .item -->
-  
+
                   <div class="property-item">
                     <a href="property-single.html" class="img">
                       <img src="asset/images/img_2.jpg" alt="Image" class="img-fluid" />
                     </a>
-  
+
                     <div class="property-content">
                       <div class="price mb-2"><span>Rs.105,291,000</span></div>
                       <div>
@@ -111,7 +111,7 @@
                           >Negombo road,Colombo</span
                         >
                         <span class="city d-block mb-3">Colombo, Sri Lanka</span>
-  
+
                         <div class="specs d-flex mb-4">
                           <span class="d-block d-flex align-items-center me-3">
                             <span class="icon-bed me-2"></span>
@@ -122,7 +122,7 @@
                             <span class="caption">2 baths</span>
                           </span>
                         </div>
-  
+
                         <a
                           href="property-single.html"
                           class="btn btn-primary py-2 px-3"
@@ -132,12 +132,12 @@
                     </div>
                   </div>
                   <!-- .item -->
-  
+
                   <div class="property-item">
                     <a href="property-single.html" class="img">
                       <img src="asset/images/img_3.jpg" alt="Image" class="img-fluid" />
                     </a>
-  
+
                     <div class="property-content">
                       <div class="price mb-2"><span>Rs.200,291,000</span></div>
                       <div>
@@ -145,7 +145,7 @@
                           >Negombo road,Colombo</span
                         >
                         <span class="city d-block mb-3">Colombo, Sri Lanka</span>
-  
+
                         <div class="specs d-flex mb-4">
                           <span class="d-block d-flex align-items-center me-3">
                             <span class="icon-bed me-2"></span>
@@ -156,7 +156,7 @@
                             <span class="caption">3 baths</span>
                           </span>
                         </div>
-  
+
                         <a
                           href="property-single.html"
                           class="btn btn-primary py-2 px-3"
@@ -166,12 +166,12 @@
                     </div>
                   </div>
                   <!-- .item -->
-  
+
                   <div class="property-item">
                     <a href="property-single.html" class="img">
                       <img src="asset/images/img_4.jpg" alt="Image" class="img-fluid" />
                     </a>
-  
+
                     <div class="property-content">
                       <div class="price mb-2"><span>Rs.108,291,000</span></div>
                       <div>
@@ -179,7 +179,7 @@
                           >Negombo road,Colombo</span
                         >
                         <span class="city d-block mb-3">Colombo, Sri Lanka</span>
-  
+
                         <div class="specs d-flex mb-4">
                           <span class="d-block d-flex align-items-center me-3">
                             <span class="icon-bed me-2"></span>
@@ -190,7 +190,7 @@
                             <span class="caption">2 baths</span>
                           </span>
                         </div>
-  
+
                         <a
                           href="property-single.html"
                           class="btn btn-primary py-2 px-3"
@@ -200,12 +200,12 @@
                     </div>
                   </div>
                   <!-- .item -->
-  
+
                   <div class="property-item">
                     <a href="property-single.html" class="img">
                       <img src="asset/images/img_5.jpg" alt="Image" class="img-fluid" />
                     </a>
-  
+
                     <div class="property-content">
                       <div class="price mb-2"><span>Rs.500,291,000</span></div>
                       <div>
@@ -213,7 +213,7 @@
                           >Negombo road,Colombo</span
                         >
                         <span class="city d-block mb-3">Colombo, Sri Lanka</span>
-  
+
                         <div class="specs d-flex mb-4">
                           <span class="d-block d-flex align-items-center me-3">
                             <span class="icon-bed me-2"></span>
@@ -224,7 +224,7 @@
                             <span class="caption">4 baths</span>
                           </span>
                         </div>
-  
+
                         <a
                           href="property-single.html"
                           class="btn btn-primary py-2 px-3"
@@ -234,12 +234,12 @@
                     </div>
                   </div>
                   <!-- .item -->
-  
+
                   <div class="property-item">
                     <a href="property-single.html" class="img">
                       <img src="asset/images/img_6.jpg" alt="Image" class="img-fluid" />
                     </a>
-  
+
                     <div class="property-content">
                       <div class="price mb-2"><span>Rs.400,291,000</span></div>
                       <div>
@@ -247,7 +247,7 @@
                           >Negombo road,Colombo</span
                         >
                         <span class="city d-block mb-3">Colombo, Sri Lanka</span>
-  
+
                         <div class="specs d-flex mb-4">
                           <span class="d-block d-flex align-items-center me-3">
                             <span class="icon-bed me-2"></span>
@@ -258,7 +258,7 @@
                             <span class="caption">4 baths</span>
                           </span>
                         </div>
-  
+
                         <a
                           href="property-single.html"
                           class="btn btn-primary py-2 px-3"
@@ -268,12 +268,12 @@
                     </div>
                   </div>
                   <!-- .item -->
-  
+
                   <div class="property-item">
                     <a href="property-single.html" class="img">
                       <img src="asset/images/img_7.jpg" alt="Image" class="img-fluid" />
                     </a>
-  
+
                     <div class="property-content">
                       <div class="price mb-2"><span>Rs.100,291,000</span></div>
                       <div>
@@ -281,7 +281,7 @@
                           >Negombo road,Colombo</span
                         >
                         <span class="city d-block mb-3">Colombo, Sri Lanka</span>
-  
+
                         <div class="specs d-flex mb-4">
                           <span class="d-block d-flex align-items-center me-3">
                             <span class="icon-bed me-2"></span>
@@ -292,7 +292,7 @@
                             <span class="caption">1 baths</span>
                           </span>
                         </div>
-  
+
                         <a
                           href="property-single.html"
                           class="btn btn-primary py-2 px-3"
@@ -302,12 +302,12 @@
                     </div>
                   </div>
                   <!-- .item -->
-  
+
                   <div class="property-item">
                     <a href="property-single.html" class="img">
                       <img src="asset/images/img_8.jpg" alt="Image" class="img-fluid" />
                     </a>
-  
+
                     <div class="property-content">
                       <div class="price mb-2"><span>Rs.300,291,000</span></div>
                       <div>
@@ -315,7 +315,7 @@
                           >Negombo road,ColomboC</span
                         >
                         <span class="city d-block mb-3">Colombo, Sri Lanka</span>
-  
+
                         <div class="specs d-flex mb-4">
                           <span class="d-block d-flex align-items-center me-3">
                             <span class="icon-bed me-2"></span>
@@ -326,7 +326,7 @@
                             <span class="caption">2 baths</span>
                           </span>
                         </div>
-  
+
                         <a
                           href="property-single.html"
                           class="btn btn-primary py-2 px-3"
@@ -336,12 +336,12 @@
                     </div>
                   </div>
                   <!-- .item -->
-  
+
                   <div class="property-item">
                     <a href="property-single.html" class="img">
                       <img src="asset/images/img_1.jpg" alt="Image" class="img-fluid" />
                     </a>
-  
+
                     <div class="property-content">
                       <div class="price mb-2"><span>Rs.200,291,000</span></div>
                       <div>
@@ -349,7 +349,7 @@
                           >Negombo road,Colombo</span
                         >
                         <span class="city d-block mb-3">Colombo, Sri Lanka</span>
-  
+
                         <div class="specs d-flex mb-4">
                           <span class="d-block d-flex align-items-center me-3">
                             <span class="icon-bed me-2"></span>
@@ -360,7 +360,7 @@
                             <span class="caption">2 baths</span>
                           </span>
                         </div>
-  
+
                         <a
                           href="property-single.html"
                           class="btn btn-primary py-2 px-3"
@@ -371,7 +371,7 @@
                   </div>
                   <!-- .item -->
                 </div>
-  
+
                 <div
                   id="property-nav"
                   class="controls"
@@ -398,7 +398,7 @@
           </div>
         </div>
       </div>
-  
+
       <section class="features-1">
         <div class="container">
           <div class="row">
@@ -445,7 +445,7 @@
           </div>
         </div>
       </section>
-  
+
       <div class="section sec-testimonials">
         <div class="container">
           <div class="row mb-5 align-items-center">
@@ -457,12 +457,12 @@
             <div class="col-md-6 text-md-end">
               <div id="testimonial-nav">
                 <span class="prev" data-controls="prev">Prev</span>
-  
+
                 <span class="next" data-controls="next">Next</span>
               </div>
             </div>
           </div>
-  
+
           <div class="row">
             <div class="col-lg-4"></div>
           </div>
@@ -491,7 +491,7 @@
                   <p class="text-black-50">Designer </p>
                 </div>
               </div>
-  
+
               <div class="item">
                 <div class="testimonial">
                   <img
@@ -515,7 +515,7 @@
                   <p class="text-black-50">Designer, Co-founder</p>
                 </div>
               </div>
-  
+
               <div class="item">
                 <div class="testimonial">
                   <img
@@ -539,7 +539,7 @@
                   <p class="text-black-50">founder</p>
                 </div>
               </div>
-  
+
               <div class="item">
                 <div class="testimonial">
                   <img
@@ -567,7 +567,7 @@
           </div>
         </div>
       </div>
-  
+
       <div class="section section-4 bg-light">
         <div class="container">
           <div class="row justify-content-center text-center mb-5">
@@ -575,7 +575,7 @@
               <h2 class="font-weight-bold heading text-primary mb-4">
                 Let's find a property that's perfect for you
               </h2>
-              
+
             </div>
           </div>
           <div class="row justify-content-between mb-5">
@@ -591,27 +591,27 @@
                 </span>
                 <div class="feature-text">
                   <h3 class="heading">2M Properties</h3>
-                  
+
                 </div>
               </div>
-  
+
               <div class="d-flex feature-h">
                 <span class="wrap-icon me-3">
                   <span class="icon-person"></span>
                 </span>
                 <div class="feature-text">
                   <h3 class="heading">Top Rated Agents</h3>
-                 
+
                 </div>
               </div>
-  
+
               <div class="d-flex feature-h">
                 <span class="wrap-icon me-3">
                   <span class="icon-security"></span>
                 </span>
                 <div class="feature-text">
                   <h3 class="heading">Legit Properties</h3>
-                  
+
                 </div>
               </div>
             </div>
@@ -668,7 +668,7 @@
           </div>
         </div>
       </div>
-  
+
       <div class="section">
         <div class="row justify-content-center footer-cta" data-aos="fade-up">
           <div class="col-lg-7 mx-auto text-center">
@@ -686,7 +686,7 @@
         </div>
         <!-- /.row -->
       </div>
-  
+
       <div class="section section-5 bg-light">
         <div class="container">
           <div class="row justify-content-center text-center mb-5">
@@ -694,7 +694,7 @@
               <h2 class="font-weight-bold heading text-primary mb-4">
                 Our Agents
               </h2>
-             
+
             </div>
           </div>
           <div class="row">
@@ -705,14 +705,14 @@
                   alt="Image"
                   class="img-fluid"
                 />
-  
+
                 <div class="person-contents">
                   <h2 class="mb-0"><a href="#">James Thomas</a></h2>
                   <span class="meta d-block mb-3">Real Estate Agent</span>
                   <p>
                     As a seasoned real estate agent, I bring a wealth of experience and dedication to every client interaction. With a keen understanding of market trends, negotiation skills, and a passion for helping clients achieve their property goals, I am committed to delivering a seamless and rewarding real estate experience. Let's embark on your property journey together!"
                   </p>
-  
+
                   <ul class="social list-unstyled list-inline dark-hover">
                     <li class="list-inline-item">
                       <a href="#"><span class="icon-twitter"></span></a>
@@ -737,14 +737,14 @@
                   alt="Image"
                   class="img-fluid"
                 />
-  
+
                 <div class="person-contents">
                   <h2 class="mb-0"><a href="#">Jean Ferdinando</a></h2>
                   <span class="meta d-block mb-3">Real Estate Agent</span>
                   <p>
                     I am a results-driven real estate agent focused on turning your property aspirations into reality. With a proven track record of successful transactions and an in-depth knowledge of the local real estate landscape, I strive to provide personalized service tailored to your unique needs. Trust me to navigate the complexities of the market and guide you towards your dream property.
                   </p>
-  
+
                   <ul class="social list-unstyled list-inline dark-hover">
                     <li class="list-inline-item">
                       <a href="#"><span class="icon-twitter"></span></a>
@@ -769,26 +769,15 @@
                   alt="Image"
                   class="img-fluid"
                 />
-  
+
                 <div class="person-contents">
                   <h2 class="mb-0"><a href="#">Alicia Gomez</a></h2>
                   <span class="meta d-block mb-3">Real Estate Agent</span>
                   <p>
                     As your dedicated real estate advisor, I prioritize your goals and work tirelessly to ensure a smooth and successful property transaction. With a client-centric approach, strong communication skills, and an extensive network, I am here to guide you through every step of the process. Whether you're buying, selling, or investing, let's collaborate to make your real estate journey a resounding success
                   </p>
-  
-                  {{-- <ul class="social list-unstyled list-inline dark-hover">
-                    <li class="list-inline-item">
-                      <a href="#"><span class="icon-twitter"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="icon-facebook"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="icon-linkedin"></span></a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#"><span class="icon-instagram"></span></a> --}}
+
+
                     </li>
                   </ul>
                 </div>

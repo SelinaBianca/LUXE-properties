@@ -11,23 +11,14 @@
       <div class="container">
           <div class="menu-bg-wrap">
               <div class="site-navigation">
-                  <a href="index.html" class="logo m-0 float-start">LUXE Properties</a>
+                  <a href="" class="logo m-0 float-start">LUXE Properties</a>
 
                   <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
                       <li class="active"><a href="#">Home</a></li>
-                      <li class="has-children">
-                          <a href="properties.blade.php">Properties</a>
-                          <ul class="dropdown">
-                              <li><a href="#">Buy Property</a></li>
-                              <li><a href="#">Sell Property</a></li>
-                              <li class="has-children">
-                                  
-                              </li>
-                          </ul>
-                      </li>
-                      <li><a href="services.html">Services</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="contact.html">Contact Us</a></li>
+                      <li><a href="{{ route('properties') }}">Properties</a></li>
+                      <li><a href="{{ route('services') }}">Advertise</a></li>
+                      <li><a href="{{ route('about') }}">Insights</a></li>
+
 
                       @guest
                           <li><a href="{{ route('login') }}">Login</a></li>
@@ -47,10 +38,10 @@
                                   @endif
 
                                    <!-- Add a link to the dashboard -->
-                    <x-dropdown-link href="{{ route('dashboard') }}">
-                        {{ __('Dashboard') }}
-                     </x-dropdown-link>
-                     
+{{--                    <x-dropdown-link href="{{ route('dashboard') }}">--}}
+{{--                        {{ __('Dashboard') }}--}}
+{{--                     </x-dropdown-link>--}}
+{{--                     --}}
                                   <div class="border-t border-gray-200"></div>
                                   <form method="POST" action="{{ route('logout') }}" x-data>
                                       @csrf
@@ -59,8 +50,8 @@
                               </ul>
                           </li>
                       @endguest
-    
-      
+
+
 
               <div class="ms-3 relative">
                 <x-dropdown align="right" width="48">
@@ -83,7 +74,7 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        
+
                         <div class="block px-4 py-2 text-xs text-gray-400">
                             {{ __('Manage Account') }}
                         </div>
@@ -100,7 +91,7 @@
 
                         <div class="border-t border-gray-200"></div>
 
-                        
+
                         <form method="POST" action="{{ route('logout') }}" x-data>
                             @csrf
 
@@ -112,7 +103,7 @@
                     </x-slot>
                 </x-dropdown>
             </div>
-    
+
               <a
                 href="#"
                 class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
@@ -126,4 +117,4 @@
           </div>
         </div>
       </nav>
-</div>  
+</div>
