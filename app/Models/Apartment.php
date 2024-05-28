@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Models;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Apartment extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'description',
+        'price',
+        'category',
+        'location',
+        'agent',
+        'contact_email',
+        'contact_phone',
+        'published_at',
+        'slug',
+        'featured',
+        'beds',
+        'baths',
+        'images'
+
+        ];
+
+    protected $casts = [
+        'images' => 'array',
+    ];
+
+}
