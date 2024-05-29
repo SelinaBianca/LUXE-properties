@@ -57,9 +57,9 @@
                                     <p class="block antialiased font-sans text-base leading-relaxed font-normal text-inherit">Limited support</p>
                                 </li>
                             </div>
-                        </ul><button class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none w-full flex items-center justify-center gap-4" type="button">join <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-5 h-5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
-                            </svg></button>
+                        </ul><a href="/paypal-test-checkout" class="mt-8 mx-auto bg-black hover:bg-blue-700 text-white px-4 py-2 rounded inline-block">
+                            Join
+                        </a>
                     </div>
                 </div>
                 <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md lg:h-max lg:scale-105 z-10 translate-y-0">
@@ -84,9 +84,9 @@
                                     <p class="block antialiased font-sans text-base leading-relaxed font-normal text-inherit">Special events access</p>
                                 </li>
                             </div>
-                        </ul><button class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none w-full flex items-center justify-center gap-4" type="button">join <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-5 h-5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
-                            </svg></button>
+                        </ul><a href="/paypal-test-checkout" class="mt-8 mx-auto bg-black hover:bg-blue-700 text-white px-4 py-2 rounded inline-block">
+                            Join
+                        </a>
                     </div>
                 </div>
                 <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md lg:h-max lg:scale-105 z-10 translate-y-0">
@@ -116,9 +116,9 @@
                                     <p class="block antialiased font-sans text-base leading-relaxed font-normal text-inherit">Personal chef consultation</p>
                                 </li>
                             </div>
-                        </ul><button class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none w-full flex items-center justify-center gap-4" type="button">join <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-5 h-5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
-                            </svg></button>
+                        </ul><a href="/paypal-test-checkout" class="mt-8 mx-auto bg-black hover:bg-blue-700 text-white px-4 py-2 rounded inline-block">
+                            Join
+                        </a>
                     </div>
                 </div>
             </div>

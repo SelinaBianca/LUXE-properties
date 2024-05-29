@@ -17,6 +17,8 @@
         rel="stylesheet"
         />
 
+
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -36,7 +38,7 @@
         <main>
             {{ $slot }}
         </main>
-        
+
 
         <div class="site-footer">
             <div class="container">
@@ -87,7 +89,7 @@
                       <li><a href="#">About us</a></li>
                       <li><a href="#">Contact us</a></li>
                     </ul>
-      
+
                     <ul class="list-unstyled social">
                       <li>
                         <a href="#"><span class="icon-instagram"></span></a>
@@ -114,16 +116,16 @@
                 <!-- /.col-lg-4 -->
               </div>
               <!-- /.row -->
-      
+
               <div class="row mt-5">
                 <div class="col-12 text-center">
-                  <!-- 
+                  <!--
                     **==========
-                    NOTE: 
-                    Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
+                    NOTE:
+                    Please don't remove this copyright link unless you buy the license here https://untree.co/license/
                     **==========
                   -->
-      
+
                   <p>
                     Copyright &copy;Selina Bianca
                     {{-- <script>
@@ -143,7 +145,7 @@
             <!-- /.container -->
           </div>
           <!-- /.site-footer -->
-      
+
           <!-- Preloader -->
           <div id="overlayer"></div>
           <div class="loader">
@@ -151,7 +153,7 @@
               <span class="visually-hidden">Loading...</span>
             </div>
           </div>
-      
+
           <script src="/asset/js/bootstrap.bundle.min.js"></script>
           <script src="/asset/js/tiny-slider.js"></script>
           <script src="/asset/js/aos.js"></script>

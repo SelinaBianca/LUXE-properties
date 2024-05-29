@@ -7,6 +7,10 @@ use app\Http\Controllers\FilamentController;
 use App\Http\Controllers\ApartmentController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\PayPalController;
+use App\Http\Controllers\AnalyticsController;
+
+
 
 
 /*
@@ -24,6 +28,10 @@ use App\Http\Controllers\AgentController;
 Route::get('/', function () {
     return view('home');
 });
+
+
+
+
 
 Route::get('/properties', function () {
     return view('properties');
@@ -83,3 +91,14 @@ Route::middleware([
         \App\Http\Controllers\UserController::class);
 });
 
+
+Route::get('/paypal-test-checkout', [PayPalController::class, 'createTransaction'])->name('paypal.test_checkout');
+Route::post('/paypal-test-process', [PayPalController::class, 'processTransaction'])->name('paypal.process_transaction');
+Route::get('/paypal-test-success', [PayPalController::class, 'captureTransaction'])->name('paypal.capture_transaction');
+
+
+Route::get('/dashboard', [AnalyticsController::class, 'index'])->name('dashboard');
+
+Route::get('/map', function () {
+    return view('map');
+});
