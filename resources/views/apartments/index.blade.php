@@ -17,7 +17,7 @@
             @endif
 
             <!-- Title and Create button -->
-            <div class="sm:flex sm:items-center mb-4">
+            <div class="sm:flex sm:items-center  mb-4">
                 <div class="sm:flex-auto">
                     <h1 class="text-base font-semibold leading-6 text-gray-900">Apartments</h1>
                     <p class="mt-2 text-sm text-gray-700">A list of all apartments with edit and delete options.</p>
@@ -71,12 +71,10 @@
                             <td class="px-6 py-4 whitespace-nowrap">{{ $apartment->featured ? 'Yes' : 'No' }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ $apartment->beds }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ $apartment->baths }}</td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                @if ($apartment->images)
-                                    @foreach ($apartment->images as $image)
-                                        <img src="{{ Storage::url('images/' . $image) }}" alt="{{ $apartment->title}}" class="w-16 h-16 object-cover">
-                                    @endforeach
-                                @endif
+                            <td class="">
+                                @foreach ($apartment->getMedia('gallery') as $media)
+                                    <img src="{{ $media->getUrl() }}" alt="{{ $apartment->title }}" class="w-16 h-16 object-cover">
+                                @endforeach
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                 <a href="{{ route('apartments.edit', $apartment) }}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
@@ -97,4 +95,3 @@
         </div>
     </div>
 </x-app-layout>
-

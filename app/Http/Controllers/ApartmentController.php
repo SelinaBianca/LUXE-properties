@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Apartment;
 
 use Illuminate\Http\Request;
 
 class ApartmentController extends Controller
 {
+
     public function index()
     {
         $apartments = Apartment::all();
@@ -27,42 +29,69 @@ class ApartmentController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|max:255',
-            'description' => 'required',
-            'price' => 'required|numeric',
-            'category' => 'nullable|string|max:255',
-            'location' => 'required',
-            'agent' => 'required|max:255',
-            'contact_email' => 'required|email|max:255',
-            'contact_phone' => 'required|max:20',
-            'published_at' => 'nullable|date',
-            'slug' => 'required|unique:apartments|max:255',
-            'featured' => 'boolean',
-            'beds' => 'nullable|integer',
-            'baths' => 'nullable|integer',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-
-
-
-
+            'description' => 'required'
         ]);
-        $images = [];
-        if($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                $path = $image->store('public/images');
-                $images[] = basename($path);
+
+        $apartment = new Apartment();
+        $apartment->title = $request->input('title');
+        $apartment->description = $request->input('description');
+        $apartment->price = $request->input('price');
+        $apartment->category = $request->input('category');
+        $apartment->location = $request->input('location');
+        $apartment->agent = $request->input('agent');
+        $apartment->contact_email = $request->input('contact_email');
+        $apartment->contact_phone = $request->input('contact_phone');
+        $apartment->published_at = $request->input('published_at');
+        $apartment->slug = $request->input('slug');
+        $apartment->featured = $request->input('featured') == "on" ? 1 : 0;
+        $apartment->beds = $request->input('beds');
+        $apartment->baths = $request->input('baths');
+        $apartment->img7 = $request->file('image7') ? $request->file('image7')->getRealPath() : null;
+
+        $apartment->save();
+
+        // check if the request has any files
+        foreach ([
+                     'image1',
+                     'image2',
+                     'image3',
+                     'image4',
+                     'image5',
+                     'image6',
+                     'image7'
+                 ] as $fileName) {
+            // check if the file name exists in the request
+            if($request->has($fileName)){
+                $apartment->addMedia($request->file($fileName))->toMediaCollection('gallery');
             }
         }
 
-        $apartment = new Apartment($request->all());
-        $apartment->images = $images;
-        $apartment->save();
 
-
-
-        Apartment::create($request->all());
 
         return redirect()->route('apartments.index')->with('success', 'Apartment created successfully.');
+    }
+
+    public function edit($id)
+    {
+        $apartment = Apartment::findOrFail($id);
+        return view('apartments.edit', compact('apartment'));
+    }
+
+
+    public function showProperties(Request $request)
+    {
+        // check if there is a search URL param
+        if ($request->has('search')) {
+            $apartments = Apartment::where('location', 'LIKE', "%$request->search%")->get();
+
+        } else {
+            // Fetch all apartments from the database
+            $apartments = Apartment::all();
+        }
+
+
+        // Return the view with the apartments data
+        return view('properties', compact('apartments'));
     }
 
     public function show(Apartment $apartment)
@@ -70,69 +99,60 @@ class ApartmentController extends Controller
         return view('apartments.show', compact('apartment'));
     }
 
-    public function edit(Apartment $apartment)
-    {
-        return view('apartments.edit', compact('apartment'));
-    }
 
-    public function update(Request $request, Apartment $apartment)
+    public function update(Request $request, $id)
     {
         $request->validate([
-            'title' => 'required|max:255',
-            'description' => 'required',
-            'price' => 'required|numeric',
-            'category' => 'nullable|string|max:255',
-            'location' => 'required',
-            'agent' => 'required|max:255',
-            'contact_email' => 'required|email|max:255',
-            'contact_phone' => 'required|max:20',
-            'published_at' => 'nullable|date',
-            'slug' => 'required|unique:apartments,slug,' . $apartment->id . '|max:255',
-            'featured' => 'boolean',
-            'beds' => 'nullable|integer',
-            'baths' => 'nullable|integer',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'description' => 'required'
         ]);
 
+        $apartment = Apartment::findOrFail($id);
+        $apartment->title = $request->input('title');
+        $apartment->description = $request->input('description');
+        $apartment->price = $request->input('price');
+        $apartment->category = $request->input('category');
+        $apartment->location = $request->input('location');
+        $apartment->agent = $request->input('agent');
+        $apartment->contact_email = $request->input('contact_email');
+        $apartment->contact_phone = $request->input('contact_phone');
+        $apartment->published_at = $request->input('published_at');
+        $apartment->slug = $request->input('slug');
+        $apartment->featured = $request->input('featured') == "on" ? 1 : 0;
+        $apartment->beds = $request->input('beds');
+        $apartment->baths = $request->input('baths');
 
-        $images = $apartment->images;
-        if($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                $path = $image->store('public/images');
-                $images[] = basename($path);
-            }
+        // Update images if new ones are provided
+        if ($request->file('image1')) {
+            $apartment->img1 = $request->file('image1')->getRealPath();
         }
+        // Update other image fields similarly
 
-        $apartment->update($request->all());
-        $apartment->images = $images;
         $apartment->save();
-
-        $apartment->update($request->all());
 
         return redirect()->route('apartments.index')->with('success', 'Apartment updated successfully.');
     }
 
-    public function destroy(Apartment $apartment)
+    public function destroy($id)
     {
+        $apartment = Apartment::findOrFail($id);
         $apartment->delete();
+
         return redirect()->route('apartments.index')->with('success', 'Apartment deleted successfully.');
     }
 
 
-    public function showProperties(Request $request)
+    public function search(Request $request)
     {
-        $query = Apartment::query();
+        $searchQuery = $request->input('search');
 
-        if ($request->has('search')) {
-            $search = $request->input('search');
-            $query->where('title', 'LIKE', "%{$search}%")
-                ->orWhere('description', 'LIKE', "%{$search}%")
-                ->orWhere('location', 'LIKE', "%{$search}%");
-        }
+        dd($searchQuery);
 
-        $apartments = $query->get();
+        // Perform search logic using $searchQuery, such as querying the database for matching properties
+        $apartments = Apartment::where('location', 'LIKE', "%$searchQuery%")->get();
+
 
         return view('properties', compact('apartments'));
     }
+
 
 }

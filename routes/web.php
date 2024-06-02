@@ -9,6 +9,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\PayPalController;
 use App\Http\Controllers\AnalyticsController;
+use App\Enums\Role;
 
 
 
@@ -28,10 +29,6 @@ use App\Http\Controllers\AnalyticsController;
 Route::get('/', function () {
     return view('home');
 });
-
-
-
-
 
 Route::get('/properties', function () {
     return view('properties');
@@ -97,8 +94,42 @@ Route::post('/paypal-test-process', [PayPalController::class, 'processTransactio
 Route::get('/paypal-test-success', [PayPalController::class, 'captureTransaction'])->name('paypal.capture_transaction');
 
 
-Route::get('/dashboard', [AnalyticsController::class, 'index'])->name('dashboard');
+Route::get('/statistics', [AnalyticsController::class, 'index'])->name('statistics');
 
-Route::get('/map', function () {
+Route::get('/apartments.show', function () {
     return view('map');
 });
+
+
+
+//Route::get('/properties', [ApartmentController::class, 'showProperties']);
+
+
+Route::get('/properties', [ApartmentController::class, 'showProperties'])->name('properties');
+
+
+
+
+Route::get('/apartments', [ApartmentController::class, 'index'])->name('apartments.index');
+Route::get('/apartments/{apartment}', [ApartmentController::class, 'show'])->name('apartments.show');
+
+Route::get('/properties/search', 'App\Http\Controllers\ApartmentController@search')->name('properties.search');
+
+
+
+
+
+
+
+
+
+
+//
+//Route::middleware(['role:' . Role::SuperAdministrator->value])->group(function () {
+//    Route::get('/admin/dashboard', function () {
+//        // Super Administrator specific routes
+//        return view('admin.dashboard');
+//    })->name('admin.dashboard');
+//});
+
+

@@ -14,7 +14,7 @@
                   <a href="" class="logo m-0 float-start">LUXE Properties</a>
 
                   <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-                      <li class="active"><a href="#">Home</a></li>
+                      <li class="active"><a href="/">Home</a></li>
                       <li><a href="{{ route('properties') }}">Properties</a></li>
                       <li><a href="{{ route('services') }}">Advertise</a></li>
                       <li><a href="{{ route('about') }}">Insights</a></li>

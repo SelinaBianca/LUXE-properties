@@ -1,8 +1,19 @@
 <x-app-layout>
 
-<h1 class="text-2xl font-bold mb-4">Create Apartment</h1>
-<form action="{{ route('apartments.store') }}" method="POST" class="max-w-md mx-auto">
+<h1 class="text-2xl font-bold mt-32"></h1>
+<!-- <form action="{{ route('apartments.store') }}" method="POST" class="max-w-md mx-auto"> -->
+<form action="{{ route('apartments.store') }}" method="POST" enctype="multipart/form-data" class="max-w-md mx-auto">
     @csrf
+
+    @if ($errors->any())
+        <div style="background-color:red" class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="mb-4">
         <label for="title" class="block text-sm font-semibold mb-1">Title</label>
         <input type="text" id="title" name="title" required
@@ -13,6 +24,7 @@
         <textarea id="description" name="description" required
                   class="form-textarea w-full rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"></textarea>
     </div>
+
     <div class="mb-4">
         <label for="price" class="block text-sm font-semibold mb-1">Price</label>
         <input type="number" id="price" name="price" required
@@ -71,10 +83,40 @@
     </div>
 
     <div class="mb-4">
-        <label for="images" class="block text-sm font-semibold mb-1">Images</label>
-        <input type="file" id="images" name="images[]" multiple
-               class="form-input w-full rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
+        <label for="image" class="block text-sm font-semibold mb-1">Image 1</label>
+        <input type="file" id="image1" name="image1" class="form-input w-full rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
     </div>
+
+    <div class="mb-4">
+        <label for="image" class="block text-sm font-semibold mb-1">Image 2</label>
+        <input type="file" id="image2" name="image2" class="form-input w-full rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
+    </div>
+
+    <div class="mb-4">
+        <label for="image" class="block text-sm font-semibold mb-1">Image 3</label>
+        <input type="file" id="image2" name="image2" class="form-input w-full rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
+    </div>
+
+    <div class="mb-4">
+        <label for="image" class="block text-sm font-semibold mb-1">Image 4</label>
+        <input type="file" id="image2" name="image2" class="form-input w-full rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
+    </div>
+
+    <div class="mb-4">
+        <label for="image" class="block text-sm font-semibold mb-1">Image 5</label>
+        <input type="file" id="image2" name="image2" class="form-input w-full rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
+    </div>
+
+    <div class="mb-4">
+        <label for="image" class="block text-sm font-semibold mb-1">Image 6</label>
+        <input type="file" id="image2" name="image2" class="form-input w-full rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
+    </div>
+
+    <div class="mb-4">
+        <label for="image" class="block text-sm font-semibold mb-1">Image 7</label>
+        <input type="file" id="image2" name="image2" class="form-input w-full rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
+    </div>
+
 
     <div class="mb-4">
         <button type="submit"
