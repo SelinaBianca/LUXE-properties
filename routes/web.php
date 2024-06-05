@@ -10,6 +10,8 @@ use App\Http\Controllers\AgentController;
 use App\Http\Controllers\PayPalController;
 use App\Http\Controllers\AnalyticsController;
 use App\Enums\Role;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 
 
 
@@ -96,7 +98,7 @@ Route::get('/paypal-test-success', [PayPalController::class, 'captureTransaction
 
 Route::get('/statistics', [AnalyticsController::class, 'index'])->name('statistics');
 
-Route::get('/apartments.show', function () {
+Route::get('/apartment.show', function () {
     return view('map');
 });
 
@@ -132,4 +134,16 @@ Route::get('/properties/search', 'App\Http\Controllers\ApartmentController@searc
 //    })->name('admin.dashboard');
 //});
 
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
 
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+    return redirect('/home');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+    return back()->with('message', 'Verification link sent!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');

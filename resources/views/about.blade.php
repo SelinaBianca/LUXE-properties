@@ -64,6 +64,85 @@
         </div>
     </section>
 
+       <!-- Client Review Form -->
+    <form id="review-form" class="bg-white shadow-lg rounded-lg p-6 mb-12">
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" name="name" class="mt-1 block w-1/2 p-2 border border-gray-300 rounded-md shadow-sm focus:ring-black focus:border-teal-900 sm:text-sm" required>
+            </div>
+            <div class="mb-4">
+                <label for="position" class="block text-sm font-medium text-gray-700">Position</label>
+                <input type="text" id="position" name="position" class="mt-1 block w-1/2 p-2 border border-gray-300 rounded-md shadow-sm focus:ring-black focus:border-teal-900 sm:text-sm" required>
+            </div>
+            <div class="mb-4">
+                <label for="review" class="block text-sm font-medium text-gray-700">Review</label>
+                <textarea id="review" name="review" rows="4" class="mt-1 block w-1/2 p-2 border border-gray-300 rounded-md shadow-sm focus:ring-black focus:border-teal-900 sm:text-sm" required></textarea>
+            </div>
+            <button type="submit" class="bg-teal-900 text-white px-4 py-2 rounded-md">Submit Review</button>
+        </form>
+
+        <!-- Display Client Reviews -->
+        <div id="reviews" class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+        </div>
+
+        <!-- Script to handle form submission and display reviews -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load reviews from localStorage
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            reviews.forEach(review => displayReview(review));
+
+            // Handle form submission
+            document.getElementById('review-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // Get form values
+                const name = document.getElementById('Name').value;
+                const position = document.getElementById('Position').value;
+                const review = document.getElementById('Review').value;
+
+                // Create a new review object
+                const newReview = { name, position, review };
+
+                // Save the review to localStorage
+                reviews.push(newReview);
+                localStorage.setItem('reviews', JSON.stringify(reviews));
+
+                // Display the new review
+                displayReview(newReview);
+
+                // Clear the form
+                document.getElementById('review-form').reset();
+            });
+
+            // Function to display a review
+            function displayReview({ name, position, review }) {
+                const reviewBlock = document.createElement('div');
+                reviewBlock.classList.add('bg-white', 'shadow-lg', 'rounded-lg', 'overflow-hidden', 'p-6');
+
+                const reviewText = document.createElement('p');
+                reviewText.classList.add('text-gray-700', 'mb-4');
+                reviewText.textContent = "${review}";
+
+                const reviewAuthor = document.createElement('p');
+                reviewAuthor.classList.add('font-semibold', 'text-orange-600');
+                reviewAuthor.textContent = - ${name},${position};
+
+                reviewBlock.appendChild(reviewText);
+                reviewBlock.appendChild(reviewAuthor);
+
+                document.getElementById('reviews').appendChild(reviewBlock);
+            }
+        });
+    </script>
+
+
+
+
+
+
 
 
 
