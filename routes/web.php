@@ -9,6 +9,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\PayPalController;
 use App\Http\Controllers\AnalyticsController;
+use App\Http\Controllers\DashboardController;
 use App\Enums\Role;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
@@ -74,10 +75,7 @@ Route::middleware([
 ])->group(function () {
 
 
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
 //   // Route::get('/admin', [FilamentController::class, 'index'])->name('filament.dashboard');
 //    Route::get('/admin/dashboard', [FilamentController::class, 'dashboard'])->name('filament.admin.pages.dashboard');
@@ -140,7 +138,7 @@ Route::get('/email/verify', function () {
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
-    return redirect('/home');
+    return redirect('/');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::post('/email/verification-notification', function (Request $request) {

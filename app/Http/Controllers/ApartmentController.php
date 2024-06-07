@@ -2,16 +2,37 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Apartment;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ApartmentController extends Controller
 {
 
     public function index()
     {
-        $apartments = Apartment::all();
+
+        $user = Auth::user();
+
+
+        if($user->role == 1){
+
+            $apartments = Apartment::all();
+
+
+        }elseif ($user->role == 5){
+            $apartments = Apartment::where('agent', $user->name)->get();
+        }
+        else{
+//            echo "You don't have permissions to view this";
+//            exit();
+            abort(403, 'UNAUTHORIZED ACCESS');
+        }
+
+
+
         return view('apartments.index', compact('apartments'));
     }
 
@@ -28,9 +49,9 @@ class ApartmentController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'description' => 'required'
-        ]);
+//        $request->validate([
+//            'description' => 'required'
+//        ]);
 
         $apartment = new Apartment();
         $apartment->title = $request->input('title');
@@ -46,7 +67,16 @@ class ApartmentController extends Controller
         $apartment->featured = $request->input('featured') == "on" ? 1 : 0;
         $apartment->beds = $request->input('beds');
         $apartment->baths = $request->input('baths');
-        $apartment->img7 = $request->file('image7') ? $request->file('image7')->getRealPath() : null;
+        $apartment->img1 = $request->file('image6') ? $request->file('image1')->getRealPath() : null;
+        $apartment->img2 = $request->file('image6') ? $request->file('image2')->getRealPath() : null;
+        $apartment->img3 = $request->file('image6') ? $request->file('image3')->getRealPath() : null;
+        $apartment->img4 = $request->file('image6') ? $request->file('image4')->getRealPath() : null;
+        $apartment->img5 = $request->file('image6') ? $request->file('image5')->getRealPath() : null;
+        $apartment->img6 = $request->file('image6') ? $request->file('image6')->getRealPath() : null;
+        $apartment->img7 = $request->file('image6') ? $request->file('image7')->getRealPath() : null;
+
+
+
 
         $apartment->save();
 
@@ -63,6 +93,8 @@ class ApartmentController extends Controller
             // check if the file name exists in the request
             if($request->has($fileName)){
                 $apartment->addMedia($request->file($fileName))->toMediaCollection('gallery');
+
+
             }
         }
 
@@ -125,11 +157,36 @@ class ApartmentController extends Controller
         if ($request->file('image1')) {
             $apartment->img1 = $request->file('image1')->getRealPath();
         }
-        // Update other image fields similarly
+
+        if ($request->file('image2')) {
+            $apartment->img2 = $request->file('image2')->getRealPath();
+        }
+
+        if ($request->file('image3')) {
+            $apartment->img3 = $request->file('image3')->getRealPath();
+        }
+
+        if ($request->file('image4')) {
+            $apartment->img4 = $request->file('image4')->getRealPath();
+        }
+
+        if ($request->file('image5')) {
+            $apartment->img5 = $request->file('image5')->getRealPath();
+        }
+
+        if ($request->file('image6')) {
+            $apartment->img6 = $request->file('image6')->getRealPath();
+        }
+
+        if ($request->file('image7')) {
+            $apartment->img7 = $request->file('image7')->getRealPath();
+        }
+
 
         $apartment->save();
 
         return redirect()->route('apartments.index')->with('success', 'Apartment updated successfully.');
+
     }
 
     public function destroy($id)
@@ -141,18 +198,7 @@ class ApartmentController extends Controller
     }
 
 
-    public function search(Request $request)
-    {
-        $searchQuery = $request->input('search');
 
-        dd($searchQuery);
-
-        // Perform search logic using $searchQuery, such as querying the database for matching properties
-        $apartments = Apartment::where('location', 'LIKE', "%$searchQuery%")->get();
-
-
-        return view('properties', compact('apartments'));
-    }
 
 
 }

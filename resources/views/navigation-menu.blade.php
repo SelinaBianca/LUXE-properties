@@ -17,7 +17,7 @@
                       <li class="active"><a href="/">Home</a></li>
                       <li><a href="{{ route('properties') }}">Properties</a></li>
                       <li><a href="{{ route('services') }}">Advertise</a></li>
-                      <li><a href="{{ route('about') }}">Insights</a></li>
+                      <li><a href="{{ route('about') }}">About Us</a></li>
 
 
                       @guest
@@ -104,16 +104,16 @@
                 </x-dropdown>
             </div>
 
-              <a
-                href="#"
-                class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
-                data-toggle="collapse"
+{{--              <a--}}
+{{--                href="#"--}}
+{{--                class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"--}}
+{{--                data-toggle="collapse"--}}
 
-                data-target="#main-navbar"
-              >
-                <span></span>
-              </a>
-            </div>
+{{--                data-target="#main-navbar"--}}
+{{--              >--}}
+{{--                <span></span>--}}
+{{--              </a>--}}
+{{--            </div>--}}
           </div>
         </div>
       </nav>

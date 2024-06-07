@@ -74,9 +74,16 @@
                                         <td
                                             class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
                                             {{ $user->email }}</td>
-                                        <td
-                                            class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
-                                            {{ ucwords(str_replace('_', ' ', Str::snake($user->role->name))) }}</td>
+
+                                        <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
+                                            {{-- Check if role is present and is an object --}}
+                                            @if ($user->role)
+                                                {{ ucwords(str_replace('_', ' ', Str::snake($user->roleName))) }}
+
+                                            @else
+                                              customer
+                                            @endif
+                                        </td>
                                         <td
                                             class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
                                             <div class="flex gap-3">

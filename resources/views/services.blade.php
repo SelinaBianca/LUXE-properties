@@ -18,7 +18,7 @@
                     </p>
 
                     <a
-                        href="#"
+                        href="mailto:selinafer2004@gmail.com"
                         class="mt-8 inline-block rounded bg-black px-12 py-3 text-sm font-medium text-white transition hover:bg-gray-400 focus:outline-none focus:ring focus:ring-yellow-400"
                     >
                         Get Started Today
@@ -47,13 +47,14 @@
                     Advertising at<br> LUXE Properties
                 </h1>
                 <p class="mr-20 text-justify text-gray-500">
-                    At LUXE-Properties we have 3 subscription plans.Choose the plan that best fits your needs and let us help you find your dream property. At LUXE-Properties, your satisfaction is our top priority.Select the plan which fits you perfectly and start posting your properties at LUXE Properties in the next instance.<p>
+                    At LUXE-Properties we have 3 subscription plans.Choose the plan that best fits your needs and let us help you sell your properties. At LUXE-Properties, your satisfaction is our top priority.Select the plan which fits you perfectly,Send us an e-mail along with your details and the subscription plan of your choice.Once we approve your request, you could then pay the subscription using the payment gateway at the bottom of th page
+                    and start posting your properties at LUXE Properties in the next instance.<p>
 
 
 
             </div>
             <div class="flex flex-1 lg:w-1/2 h-96 relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
-                <img src="https://agencex-astro.vercel.app/images/image1.webp" alt="Hero image" width="2350" height="2359"
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hero image" width="2350" height="2359"
                      class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96">
             </div>
         </div>
@@ -62,7 +63,7 @@
 
 
     <section class="p-3">
-        <div class="relative bg-black text-gray-700 flex h-10 min-h-[314px] w-full flex-col items-center justify-center rounded-xl bg-gray-900 px-6 py-4">
+        <div class="relative bg-black text-gray-700 flex h-10 min-h-[314px] w-full flex-col items-center justify-center rounded-xl px-6 py-4">
             <div class="container mx-auto text-center">
                 <h2 class="block antialiased tracking-normal font-sans text-3xl font-semibold leading-[1.3] text-white mb-2">Pricing</h2>
                 <p class="block antialiased font-sans text-lg font-normal leading-relaxed text-white mb-6 opacity-70">Invest in Success - Our Competitive Pricing Ensures Maximum Exposure for Your Property at the Best Value. Discover Affordable Packages Tailored to Meet Your Advertising Needs!</p>
@@ -72,7 +73,7 @@
             <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md lg:h-max lg:scale-100 z-10 translate-y-0">
                     <div class="p-4 text-center">
-                        <h5 class="antialiased tracking-normal font-sans text-lg font-semibold leading-snug text-green-500 flex justify-center mt-2 mb-2">Personal Plan</h5>
+                        <h5 class="antialiased tracking-normal font-sans text-lg font-semibold leading-snug text-teal-900 flex justify-center mt-2 mb-2">Personal Plan</h5>
                         <h3 class="antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900 flex justify-center mt-3 mb-2">$9.99<span class="block antialiased tracking-normal font-sans text-lg font-semibold leading-snug text-blue-gray-900 self-end -translate-y-1">/per month</span></h3>
                         <ul class="flex flex-col items-center justify-start gap-2 pt-4 mt-2 mb-4">
                             <li class="flex items-center gap-2 py-1 text-gray-700">
@@ -93,7 +94,7 @@
                 </div>
                 <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md lg:h-max lg:scale-100 z-10 translate-y-0">
                     <div class="p-4 text-center">
-                        <h5 class="antialiased tracking-normal font-sans text-lg font-semibold leading-snug text-green-500 flex justify-center mt-2 mb-2">Premium Plan</h5>
+                        <h5 class="antialiased tracking-normal font-sans text-lg font-semibold leading-snug text-teal-900 flex justify-center mt-2 mb-2">Premium Plan</h5>
                         <h3 class="antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900 flex justify-center mt-3 mb-2">$19.99<span class="block antialiased tracking-normal font-sans text-lg font-semibold leading-snug text-blue-gray-900 self-end -translate-y-1">/per month</span></h3>
                         <ul class="flex flex-col items-center justify-start gap-2 pt-4 mt-2 mb-4">
                             <li class="flex items-center gap-2 py-1 text-gray-700">
@@ -115,7 +116,7 @@
                 </div>
                 <div class="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md lg:h-max lg:scale-100 z-10 translate-y-0">
                     <div class="p-4 text-center">
-                        <h5 class="antialiased tracking-normal font-sans text-lg font-semibold leading-snug text-green-500 flex justify-center mt-2 mb-2">Ultimate Plan</h5>
+                        <h5 class="antialiased tracking-normal font-sans text-lg font-semibold leading-snug text-teal-900 flex justify-center mt-2 mb-2">Ultimate Plan</h5>
                         <h3 class="antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900 flex justify-center mt-3 mb-2">$29.99<span class="block antialiased tracking-normal font-sans text-lg font-semibold leading-snug text-blue-gray-900 self-end -translate-y-1">/per month</span></h3>
                         <ul class="flex flex-col items-center justify-start gap-2 pt-4 mt-2 mb-4">
                             <li class="flex items-center gap-2 py-1 text-gray-700">
@@ -140,7 +141,7 @@
 
 <section>
 
-</section>>
+</section>
 
 
 

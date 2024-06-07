@@ -90,12 +90,11 @@
             <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
               <div class="box-feature">
                 <span class="flaticon-building"></span>
-                <h3 class="mb-3">Insights</h3>
+                <h3 class="mb-3">Advertise </h3>
                 <p>
-                  Empower your property journey with our real estate application,
-                    featuring cutting-edge insights on market trends for your ideal investment.
+                    Boost your property's exposure and streamline your property management by advertising on our website.
                 </p>
-                <p><a href="/about" class="learn-more">Learn More</a></p>
+                <p><a href=" {{ route('services') }}" class="learn-more">Learn More</a></p>
               </div>
             </div>
             <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
@@ -106,17 +105,17 @@
                  our agents
                     offer seamless service to customers who are ready to guide you through every step of your journey
                 </p>
-                <p><a href="/services" class="learn-more">Learn More</a></p>
+                <p><a href="{{ route('services') }}" class="learn-more">Learn More</a></p>
               </div>
             </div>
             <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
               <div class="box-feature">
                 <span class="flaticon-house-1"></span>
-                <h3 class="mb-3">Mortgage Calulator</h3>
+                <h3 class="mb-3">Customer Feedback</h3>
                 <p>
-                  complete with a sophisticated mortgage calculator that empowers you to make informed financial decisions
+                    Your opinion matters to us! We are committed to providing the best possible experience for our users, and we value your feedback.
                 </p>
-                <p><a href="#" class="learn-more">Learn More</a></p>
+                <p><a href="{{ route('about') }}" class="learn-more">Feedback</a></p>
               </div>
             </div>
           </div>
@@ -130,7 +129,7 @@
                 <h2 class="mb-4">Be a part of our growing real state agents</h2>
                 <p>
                     <a
-                        href="#"
+                        href="{{ route('services') }}"
                         target="_blank"
                         class="btn btn-primary text-white py-3 px-4 mb-14"
                     >Apply for Real Estate agent</a>

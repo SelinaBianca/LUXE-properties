@@ -47,7 +47,10 @@
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Featured</th>
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Beds</th>
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Baths</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Images</th>
+
                         <th scope="col" class="relative px-6 py-3">
+
                             <span class="sr-only">Edit</span>
                         </th>
                         <th scope="col" class="relative px-6 py-3">
@@ -74,6 +77,7 @@
                             <td class="">
                                 @foreach ($apartment->getMedia('gallery') as $media)
                                     <img src="{{ $media->getUrl() }}" alt="{{ $apartment->title }}" class="w-16 h-16 object-cover">
+
                                 @endforeach
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">

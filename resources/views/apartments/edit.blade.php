@@ -2,7 +2,7 @@
 
 <x-app-layout>
 
-    <h1 class="text-2xl font-bold mb-4">Edit Apartment</h1>
+    <h1 class="text-2xl font-bold mt-32 "></h1>
     <form action="{{ route('apartments.update', $apartment->id) }}" method="POST" class="max-w-md mx-auto">
 @csrf
 @method('PUT')
@@ -71,16 +71,11 @@
     <input type="number" id="baths" name="baths" value="{{ $apartment->baths }}"
            class="form-input w-full rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
 </div>
-        <div class="mb-4">
-            <label for="current_images" class="block text-sm font-semibold mb-1">Current Images</label>
-            <div>
-                @if ($apartment->images)
-                    @foreach ($apartment->images as $image)
-                        <img src="{{ Storage::url('images/' . $image) }}" alt="{{ $apartment->title }}" class="w-16 h-16 object-cover inline-block">
-                    @endforeach
-                @endif
-            </div>
-        </div>
+
+
+
+
+
 
 <div class="mb-4">
     <button type="submit"
