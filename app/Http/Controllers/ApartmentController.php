@@ -26,9 +26,9 @@ class ApartmentController extends Controller
             $apartments = Apartment::where('agent', $user->name)->get();
         }
         else{
-//            echo "You don't have permissions to view this";
-//            exit();
-            abort(403, 'UNAUTHORIZED ACCESS');
+            echo "You don't have permissions to view this";
+            exit();
+
         }
 
 
