@@ -3,10 +3,13 @@
 namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Apartment extends Model
+
+class Apartment extends Model implements HasMedia
 {
-    use HasFactory;
+    use HasFactory, InteractsWithMedia;
 
     protected $fillable = [
         'title',
@@ -21,13 +24,11 @@ class Apartment extends Model
         'slug',
         'featured',
         'beds',
-        'baths',
-        'images'
-
+        'baths'
         ];
 
-    protected $casts = [
-        'images' => 'array',
-    ];
+//    protected $casts = [
+//        'images' => 'array',
+//    ];
 
 }

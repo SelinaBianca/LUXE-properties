@@ -3,6 +3,9 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Exceptions\PostTooLargeException;
+use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -27,4 +30,16 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    public function render($request, Throwable $e)
+    {
+        if ($e instanceof PostTooLargeException) {
+            return response()->json([
+                'message' => 'The uploaded file is too large. Please upload a smaller file.'
+            ], Response::HTTP_REQUEST_ENTITY_TOO_LARGE);
+        }
+
+        return parent::render($request, $e);
+    }
+
 }

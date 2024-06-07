@@ -31,4 +31,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'analytics' => [
+        'default_site_id' => env('G-V3VN8S7WBV'),
+    ],
+
+
 ];
