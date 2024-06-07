@@ -9,10 +9,16 @@ class UserController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        return view('admin.user.index', [
-            'users' => User::paginate(10)
-        ]);
+    { $users = User::paginate(10);
+        foreach($users as $user){
+            $user['roleName'] = Role::getCaseName($user->role);
+        }
+
+//        echo json_encode( $users);
+//        exit();
+  return view('admin.user.index', [
+        'users' => $users
+       ]);
     }
     /**
      * Show the form for creating a new resource.
@@ -55,8 +61,12 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(User $user)
-    {
+    public function edit(User $user){
+
+
+//     echo json_encode( Role::getAllCases());
+//        exit();
+
         return view('admin.user.form', [
             'user' => $user,
             'roles' => Role::cases()
