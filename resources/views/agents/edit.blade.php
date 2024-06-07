@@ -1,6 +1,6 @@
 <x-app-layout>
 
-    <h1 class="text-2xl font-bold mb-4">Edit Agent</h1>
+    <h1 class="text-2xl font-bold mt-32"></h1>
     <form action="{{ route('agents.update', $agent->id) }}" method="POST" class="max-w-md mx-auto">
         @csrf
         @method('PUT')

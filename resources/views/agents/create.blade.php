@@ -1,7 +1,7 @@
 
 <x-app-layout>
 
-    <h1 class="text-2xl font-bold mb-4">Create Agents</h1>
+    <h1 class="text-2xl font-bold mt-32"></h1>
     <form action="{{ route('agents.store') }}" method="POST" class="max-w-md mx-auto">
         @csrf
         <div class="mb-4">
